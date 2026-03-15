@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Water Flow Optimizer</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Water Distribution Optimization</h1>
+
+<h2>Network Input</h2>
+
+<div class="form">
+
+<label>Pipe From</label>
+<input id="from">
+
+<label>Pipe To</label>
+<input id="to">
+
+<label>Capacity</label>
+<input id="capacity">
+
+<label>Base Cost</label>
+<input id="cost">
+
+<button onclick="addEdge()">Add Pipe</button>
+
+</div>
+
+<h3>Network Pipes</h3>
+
+<ul id="edgeList"></ul>
+
+<button onclick="runSimulation()">Run Optimization</button>
+
+<h2>Results</h2>
+
+<div id="result"></div>
+
+<canvas id="flowChart"></canvas>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
