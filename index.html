@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
-<title>Water Flow Optimizer</title>
+<title>Water Flow Optimization System</title>
 
 <link rel="stylesheet" href="/static/style.css">
 
@@ -14,31 +15,51 @@
 
 <h1>Water Distribution Optimization</h1>
 
+<div class="container">
+
+<!-- Input Section -->
+
+<div class="card">
+
 <h2>Network Input</h2>
+
+<p>Add pipes between nodes with capacity and base cost.</p>
 
 <div class="form">
 
-<label>Pipe From</label>
-<input id="from">
+<input id="from" placeholder="From Node (S, A...)">
 
-<label>Pipe To</label>
-<input id="to">
+<input id="to" placeholder="To Node (T, B...)">
 
-<label>Capacity</label>
-<input id="capacity">
+<input id="capacity" placeholder="Capacity">
 
-<label>Base Cost</label>
-<input id="cost">
+<input id="cost" placeholder="Base Cost">
 
 <button onclick="addEdge()">Add Pipe</button>
 
 </div>
 
-<h3>Network Pipes</h3>
+</div>
+
+
+<!-- Pipe List -->
+
+<div class="card">
+
+<h2>Network Pipes</h2>
+
+<p>List of pipes added to the network.</p>
 
 <ul id="edgeList"></ul>
 
 <button onclick="runSimulation()">Run Optimization</button>
+
+</div>
+
+
+<!-- Results -->
+
+<div class="card">
 
 <h2>Results</h2>
 
@@ -46,7 +67,13 @@
 
 <canvas id="flowChart"></canvas>
 
+</div>
+
+</div>
+
+
 <script src="/static/script.js"></script>
 
 </body>
+
 </html>
